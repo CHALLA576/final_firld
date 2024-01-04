@@ -4,6 +4,12 @@ import { API_BASE_URL } from '@/config/serverApiConfig';
 import errorHandler from './errorHandler';
 import successHandler from './successHandler';
 
+
+// Retrieve the token from storage and set it in the headers
+const token = 
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+
 axios.defaults.baseURL = API_BASE_URL;
 axios.defaults.withCredentials = true;
 
